@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*----------------------------------------------------MENU----------------------------------------------------*/
+header {
+    background-color: #741D1D;
+    width: 100%;
+    height: 65px;
+    padding: 10px;
+    display: flex;
+}
+
+.container_menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 45px;
+    display: inline-block;
+}
+
+.title_rec {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+.social {
+    width: auto;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.img_perfil {
+    width: 38px;
+    margin-right: 20px;
+
+}
+
+.img_menu {
+    width: 38px;
+    margin-right: 20px;
+}
+
+
+.botao_menu {
+    background: transparent;
+    border: none;
+    width: auto;
+    cursor: pointer;
+}
+
+.giro {
+    animation: giro 300ms ease-in;
+}
+
+@keyframes giro {
+    to {
+        transform: rotate(0deg);
+    }
+
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+.giro2 {
+    animation: giro2 300ms ease-in;
+}
+
+@keyframes giro2 {
+    to {
+        transform: rotate(360deg);
+    }
+
+    from {
+
+        transform: rotate(0deg);
+    }
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.fade-in {
+    animation: fadeIn 300ms ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateX(25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 300ms ease-in;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateX(25px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+nav.active {
+    display: block;
+}
+
+/*----------------------------------------------------CORPO----------------------------------------------------*/
+
+body {
+    min-width: 100vh;
+    background: url("img/fundo1.jpeg");
+    height: 100vh;
+    overflow: hidden;
+}
+
+.geral {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_roleta {
+    color: white;
+    margin: 50px 0 50px;
+}
+
+.number img {
+    width: 90px;
+}
+
+.container .spinBtn {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    border: 4px solid rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    user-select: none;
+}
+
+.container .spinBtn::before {
+    content: '';
+    position: absolute;
+    top: -28px;
+    width: 20px;
+    height: 30px;
+    background: #333;
+    clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+
+.container .wheel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px rgb(0, 0, 0), 0 0 0 15px rgb(0, 0, 0), 0 0 0 18px #111;
+    transition: transform 5s ease-in-out;
+}
+
+.container .wheel .number {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc(45deg * var(--i)));
+    clip-path: polygon(0 0, 56% 0, 100% 100%, 0 56%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.container .wheel .number span {
+    position: relative;
+    transform: rotate(45deg);
+    font-size: 6em;
+    font-weight: 700;
+    color: rgb(163, 163, 163);
+    text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.15);
+    justify-items: center;
+    top: 2%;
+    right: -10%;
+    transform: rotate(-50deg);
+    text-align: center;
+}
+
+.popup {
+    z-index: 10;
+    position: absolute;
+    height: 570px;
+    width: 540px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    background: linear-gradient(#691923, #a32636);
+    padding: 20px;
+    border: 5px solid #000;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imagemPopUp {
+    width: 180px;
+}
+
+#tituloPopUp {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 200%;
+    color: white;
+}
+
+#sinopsePopUp {
+    margin: 10px 20px 60px 20px;
+    padding: 0;
+    font-size: 125%;
+    color: white;
+    text-align: center;
+}
+
+/*----------------------------------------------------RESPONSIVIDADE----------------------------------------------------*/
+/*--------------------------------------------320px — 480px: dispositivos móveis----------------------------------------*/
+/*--------------------------------------------------------MENU----------------------------------------------------------*/
+
+@media (max-width: 480px) {
+
+    body {
+        overflow: scroll;
+    }
+
+    header {
+        background-color: #741D1D;
+        width: 100%;
+        height: 58px;
+        padding: 10px;
+        display: flex;
+        position: fixed;
+        z-index: 999;
+    }
+
+    /*
+        .container_menu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    */
+
+    .logo {
+        margin-left: 2px;
+    }
+
+    .logo img {
+        width: 25px;
+    }
+
+    .title_rec {
+        font-size: 14px;
+        margin-left: 3px;
+    }
+
+    .social {
+        width: auto;
+        margin-left: 20px;
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+    .img_perfil {
+        width: 25px;
+        margin-right: 15px;
+    }
+
+    .img_menu {
+        width: 30px;
+        margin-right: 2px;
+    }
+}
+
+/*----------------------------------------------------RESPONSIVIDADE----------------------------------------------------*/
+/*--------------------------------------------320px — 480px: dispositivos móveis----------------------------------------*/
+/*--------------------------------------------------------ROLETA--------------------------------------------------------*/
+@media (max-width: 480px) {
+    .geral {
+        width: 58%;
+        height: 100vh;
+    }
+
+    .title_roleta {
+        font-size: 24px;
+        text-align: center;
+        margin: 61px 0 50px;
+    }
+
+    .container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .container .spinBtn {
+        width: 70px;
+        height: 70px;
+        font-size: 15px;
+    }
+
+    .number img {
+        width: 70px;
+    }
+
+    /*----------------------------------------------------RESPONSIVIDADE----------------------------------------------------*/
+    /*--------------------------------------------320px — 480px: dispositivos móveis----------------------------------------*/
+    /*--------------------------------------------------------PopUp--------------------------------------------------------*/
+
+    .popup {
+        height: auto;
+        width: 362px;
+    }
+
+    #imagemPopUp {
+        width: 200px;
+    }
+
+    #sinopsePopUp {
+        margin: 0;
+    }
+
+    #tituloPopUp {
+        font-size: 30px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+/*----------------------------------------------------RESPONSIVIDADE----------------------------------------------------*/
+/*--------------------------------------------481px — 768px: iPads, tablets----------------------------------------*/
+/*--------------------------------------------------------MENU----------------------------------------------------------*/
+@media (max-width: 840px) and (min-width: 481px) {
+    body {
+        min-width: 0;
+    }
+
+    .geral {
+        width: 100%;
+        height: auto;
+    }
+
+    .popup {
+        top: 40%;
+    }
+}
