@@ -1,0 +1,873 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%;
+    height: 100%;
+ 
+    background-image: url('../img/background_site_preto.jpg');
+    font-family: 'Inter', sans-serif;
+}
+
+
+/*----------------------------------------------------MENU----------------------------------------------------*/
+
+header {
+    background-color: #741D1D;
+    width: 100%;
+    height: 65px;
+    padding: 10px;
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+
+.container_menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 45px;
+    display: inline-block;
+}
+
+.title_rec {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+.social {
+    width: auto;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.img_perfil {
+    width: 38px;
+    margin-right: 20px;
+
+}
+
+.img_menu {
+    width: 38px;
+    margin-right: 20px;
+}
+
+
+.botao_menu {
+    background: transparent;
+    border: none;
+    width: auto;
+    cursor: pointer;
+}
+
+.giro {
+    animation: giro 300ms ease-in;
+}
+
+@keyframes giro {
+    to {
+        transform: rotate(0deg);
+    }
+
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+.giro2 {
+    animation: giro2 300ms ease-in;
+}
+
+@keyframes giro2 {
+    to {
+        transform: rotate(360deg);
+    }
+
+    from {
+
+        transform: rotate(0deg);
+    }
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.fade-in {
+    animation: fadeIn 300ms ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateX(25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 300ms ease-in;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateX(25px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+nav.active {
+    display: block;
+}
+
+
+/*----------------------------------------------------CORPO----------------------------------------------------*/
+/*------------------------------------------------TELA PRINCIPAL-----------------------------------------------*/
+
+.container_corpo {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+.tela_principal {
+    /*width: 506px; Outra opção de largura, fica melhor na responsividade.*/
+    width: 580px;
+    height: 540px;
+    display: inline-block;
+    position: relative;
+    padding: 0 25px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    background: linear-gradient(#D64B4B99, #6b0b0b7a);
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+.topo {
+    margin: 30px 0 60px;
+}
+
+.topo h1 {
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 0px 40px 0px;
+}
+
+.botoes input {
+    width: 110px;
+    height: 35px;
+    background-color: #EE4D4D;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+span {
+    padding: 0px 80px 0px 0px;
+    ;
+}
+
+.meio {
+    color: white;
+    font-weight: 400;
+}
+
+.meio h3 {
+    font-weight: 600;
+}
+
+.filtros {
+    display: flex;
+    margin-top: 20px;
+}
+
+.filtro {
+    display: inline-block;
+}
+
+.format_tablet {
+    display: none;
+}
+
+.filtro-direita {
+    margin-left: 115px;
+}
+
+.filtro p,
+select {
+    margin: 7px 0;
+}
+
+select {
+    width: 168px;
+    height: 27px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.fim {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
+}
+
+.fim button {
+    width: 153px;
+    height: 48px;
+    border-radius: 5px;
+    border: none;
+    background-color: #741D1D;
+    color: white;
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.fim button:hover {
+    transition-delay: 100ms;
+    background: #801515;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*----------------------------------------------------CORPO----------------------------------------------------*/
+/*------------------------------------------------TELA VISUALIZAÇÃO--------------------------------------------*/
+
+.view_filme {
+    width: 580px;
+    height: 540px;
+    padding: 15px;
+    border-radius: 15px;
+    /*background: linear-gradient(#D64B4B99, #6b0b0b7a);
+    background-color: rgb(0, 0, 0);*/
+    color: white;
+    text-align: center;
+}
+
+.view_filme h1 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.poster img {
+    width: 150px;
+}
+
+.info_filme {
+    margin-bottom: 30px;
+}
+
+.info_principal h3 {
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.info_principal p {
+    display: inline-block;
+    margin: 0 23px;
+}
+
+.info_sinopse {
+    margin-top: 25px;
+    text-align: left;
+    padding: 0 30px;
+}
+
+.info_disponibilidade {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 17px 0;
+}
+
+.feedback {
+    display: flex;
+    justify-content: center;
+}
+
+.feedback button {
+    width: 78px;
+    height: 39px;
+    border-radius: 5px;
+    border: none;
+    background-color: #741D1D;
+    text-align: center;
+}
+
+.watchlist {
+    color: white;
+    font-weight: 600;
+}
+
+.feedback img {
+    width: 24px;
+}
+
+.deslike {
+    transform: rotate(180deg);
+    margin: 0 4px;
+}
+
+/*----------------------------------------------------RESPONSIVIDADE----------------------------------------------------*/
+/*--------------------------------------------320px — 480px: dispositivos móveis----------------------------------------*/
+/*--------------------------------------------------------MENU----------------------------------------------------------*/
+
+@media (max-width: 360px) {
+    .view_filme {
+        width: 335px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        overflow: scroll;
+    }
+
+    header {
+        background-color: #741D1D;
+        width: 100%;
+        height: 58px;
+        padding: 10px;
+        display: flex;
+        position: fixed;
+        z-index: 999;
+    }
+
+    /*
+        .container_menu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    */
+
+    .logo {
+        margin-left: 2px;
+    }
+
+    .logo img {
+        width: 25px;
+    }
+
+    .title_rec {
+        font-size: 14px;
+        margin-left: 3px;
+    }
+
+    .social {
+        width: auto;
+        margin-left: 20px;
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+    .img_perfil {
+        width: 25px;
+        margin-right: 15px;
+    }
+
+    .img_menu {
+        width: 30px;
+        margin-right: 2px;
+    }
+}
+
+/*----------------------------------------------------RESPONSIVIDADE----------------------------------------------------*/
+/*--------------------------------------------320px — 480px: dispositivos móveis----------------------------------------*/
+/*--------------------------------------------------------CORPO---------------------------------------------------------*/
+
+@media (max-width: 480px) {
+
+    .tela_principal {
+        width: 334px;
+        height: 712px;
+        padding: 0 25px;
+        margin-top: 35px;
+    }
+
+    .container_corpo {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .topo {
+        margin: 30px 0 60px;
+    }
+
+    .topo h1 {
+        font-size: 19px;
+        text-align: center;
+
+    }
+
+    .botoes {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 30px 0px 40px 0px;
+    }
+
+    .botoes input {
+        width: 110px;
+        height: 35px;
+        background-color: #EE4D4D;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        font-size: 14px;
+    }
+
+    span {
+        padding: 0px 80px 0px 0px;
+    }
+
+    .meio {
+        color: white;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .meio h3 {
+        font-weight: 600;
+    }
+
+    .filtros {
+        display: flex;
+        margin-top: 16px;
+        flex-direction: column;
+    }
+
+    .filtro {
+        display: inline-block;
+    }
+
+    .filtro-direita {
+        margin-left: 0px;
+    }
+
+    .filtro p,
+    select {
+        margin: 7px 0;
+    }
+
+    select {
+        width: 168px;
+        height: 27px;
+        background-color: black;
+        border-radius: 5px;
+        color: white;
+        display: inline-block;
+        border: none;
+    }
+
+    .fim {
+        width: auto;
+        margin: 20px 0 25px 0;
+        text-align: center;
+        position: unset;
+    }
+
+    .fim button {
+        width: 153px;
+        height: 48px;
+        border-radius: 5px;
+        border: none;
+        background-color: #741D1D;
+        color: white;
+        font-size: 16px;
+        margin-left: 4px;
+    }
+
+    .fim button:hover {
+        transition-delay: 100ms;
+        background: #801515;
+        color: #fff;
+    }
+
+/*----------------------------------------------------CORPO----------------------------------------------------*/
+/*------------------------------------------------TELA VISUALIZAÇÃO--------------------------------------------*/
+    .view_filme {
+        width: 400px;
+        height: 615px;
+        padding: 15px;
+        border-radius: 15px;
+        /*background: linear-gradient(#D64B4B99, #6b0b0b7a);
+        background-color: rgb(0, 0, 0);*/
+        color: white;
+        text-align: center;
+    }
+
+    .info_filme {
+        width: auto;
+        height: 430px;
+    }
+
+    .info_sinopse p {
+        text-align: center;
+    }
+
+
+    .botoes {
+        display: none;
+    }
+
+    .button_limpar {
+        display: none;
+    }
+}
+
+
+/*----------------------------------------------------RESPONSIVIDADE----------------------------------------------------*/
+/*--------------------------------------------481px — 768px: iPads, tablets----------------------------------------*/
+/*--------------------------------------------------------MENU----------------------------------------------------------*/
+@media (max-width: 840px) and (min-width: 481px) {
+
+    body {
+        overflow: scroll;
+    }
+
+
+    /*
+        .container_menu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    */
+
+    header {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+    }
+
+    .logo {
+        margin-left: 2px;
+    }
+
+    .logo img {
+        width: 42px;
+    }
+
+    .title_rec {
+        font-size: 20px;
+        margin-left: 3px;
+    }
+
+    .social {
+        width: auto;
+        margin-left: 20px;
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+    .img_perfil {
+        width: 30px;
+        margin-right: 15px;
+    }
+
+    .img_menu {
+        width: 32px;
+        margin-right: 2px;
+    }
+
+
+/*----------------------------------------------------RESPONSIVIDADE----------------------------------------------------*/
+/*--------------------------------------------481px — 768px: iPads, tablets----------------------------------------*/
+/*--------------------------------------------------------CORPO---------------------------------------------------------*/
+
+
+
+    .tela_principal {
+        width: 650px;
+        height: 505px;
+        margin-top: 55px;
+    }
+
+
+    .container_corpo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .topo {
+        margin: 30px 0 50px;
+    }
+
+    .topo h1 {
+        font-size: 22px;
+        text-align: center;
+
+    }
+
+    .botoes {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 30px 0px 40px 0px;
+    }
+
+    .botoes input {
+        width: 110px;
+        height: 35px;
+        background-color: #EE4D4D;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        font-size: 22px;
+    }
+
+    span {
+        padding: 0px 80px 0px 0px;
+    }
+
+    .meio {
+        color: white;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .meio h3 {
+        font-weight: 600;
+        font-size: 22px;
+    }
+
+    .filtros {
+        display: flex;
+        margin-top: 16px;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 22px;
+    }
+
+    .filtro {
+        display: inline-block;
+    }
+
+    .filtro-direita {
+        margin-left: 0px;
+    }
+
+    .filtro p,
+    select {
+        margin: 7px 0;
+    }
+
+    select {
+        width: 168px;
+        height: 27px;
+        background-color: black;
+        border-radius: 5px;
+        color: white;
+        display: inline-block;
+        border: none;
+    }
+
+    .fim {
+        width: auto;
+        height: 26%;
+        text-align: center;
+        position: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .fim button {
+        width: 153px;
+        height: 48px;
+        border-radius: 5px;
+        border: none;
+        background-color: #741D1D;
+        color: white;
+        font-size: 19px;
+        margin-left: 4px;
+    }
+
+    .fim button:hover {
+        transition-delay: 100ms;
+        background: #801515;
+        color: #fff;
+    }
+
+/*----------------------------------------------------CORPO----------------------------------------------------*/
+/*------------------------------------------------TELA VISUALIZAÇÃO---------------------------------------------*/
+
+    .view_filme {
+        width: 400px;
+        height: 615px;
+        padding: 15px;
+        border-radius: 15px;
+        /*background: linear-gradient(#D64B4B99, #6b0b0b7a);
+        background-color: rgb(0, 0, 0);*/
+        color: white;
+        text-align: center;
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .view_filme_tablet {
+        display: block;
+    }
+
+    .view_filme h1 {
+        font-size: 30px;
+    }
+
+    .poster img {
+        width: 320px;
+        margin: 28px 0;
+    }
+
+    .info_principal h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .info_principal p {
+        font-size: 22px;
+        margin: 0 19px;
+    }
+
+    .info_sinopse {
+        padding: 0;
+        font-size: 25px;
+        width: 580px;
+        text-align: center;
+    }
+
+    .info_disponibilidade {
+        font-size: 23px;
+        margin: 26px 0;
+    }
+
+
+    .info_filme {
+        width: auto;
+        height: 600px;
+    }
+
+    .feedback button {
+        width: 150px;
+        height: 54px;
+        font-size: 23px;
+    }
+
+    .feedback img {
+        width: 31px;
+    }
+
+    .deslike {
+        margin: 0 16px;
+    }
+
+    .botoes {
+        display: none;
+    }
+
+    .button_limpar {
+        display: none;
+    }
+}
+
+
+/*----------------------------------------------------RESPONSIVIDADE----------------------------------------------------*/
+/*-----------------------------------------769px — 1024px: telas pequenas, laptops.-------------------------------------*/
+/*--------------------------------------------------------CORPO---------------------------------------------------------*/
+@media (max-width: 1360px) and (min-width: 841px) {
+    .tela_principal {
+        height: 500px;
+    }
+
+    .view_filme {
+        width: 615px;
+        height: 500px;
+    }
+
+    .info_sinopse p {
+        font-size: 14px;
+    }
+}

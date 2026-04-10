@@ -1,0 +1,363 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(#5c1e26 ,#3b1419);
+    width: 100%;    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 500px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    border-radius: 45px;
+    background: linear-gradient(#a32636 ,#691923) ;
+   /* background: #7c222e ;*/
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .6);
+    align-items: center;  
+}
+
+.titulo_celular {
+    display: none;
+}
+
+.left-login {
+    width: 500px;
+    height: 65vh;
+    text-align: center;
+}
+
+.left-login > h1 {
+    text-align: left;
+    color: #ffffff;
+    width: 500px;
+    font-size: 26px;
+    margin: 46px 0 50px;
+}
+
+/*CSS Card Login*/
+
+.login-box {
+    top: 50%;
+    left: 80%;
+    width: 400px;
+    height: 475px;
+    padding: 40px;
+    /*transform: translate(-50%, -50%);*/
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    margin: 40px 0px;
+}
+
+.login-box h2 {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+    top: 25px;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: 1px solid #ffffff36;
+    border-radius: 4px;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    margin-left: 4px;
+    padding: 4px 0;
+    font-size: 16px;
+    color: #ffffff36;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label, .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+.login-box form .login_cadastro {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px;
+    height: 20px;
+    width: 104px;
+    text-align: center;
+}
+
+.login-box .login_cadastro:hover {
+    background: #db0202;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #db0202, 0 0 25px #db0202, 0 0 50px #db0202, 0 0 100px #db0202;
+}
+
+.login-box .login_cadastro span {
+    position: absolute;
+    display: block;
+}
+
+.login-box .login_cadastro span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #db0202);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0%{
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+.login-box .login_cadastro span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #db0202);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s;
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+.login-box .login_cadastro span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #db0202);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s;
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+.login-box .login_cadastro span:nth-child(4) {
+    bottom: -100;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(270deg, transparent, #db0202);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .7s;
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+  
+.btn_enviar {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    font-size: 17px;
+}
+
+.user_registrado {
+    color: #ff4949;
+    position: relative;
+    top: 14px;
+    font-size: 13px;
+    margin: 0;
+}
+
+.Slogin_Scadastro {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.450);
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.Slogin_Scadastro:hover {
+    text-decoration: underline;
+}
+
+.botao {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/*----------------------------------------------------RESPONSIVIDADE----------------------------------------------------*/
+/*--------------------------------------------320px — 480px: dispositivos móveis----------------------------------------*/
+/*--------------------------------------------------------GERAL---------------------------------------------------------*/
+
+@media (max-width: 480px) {
+    body {
+        background: linear-gradient(#a32636, #691923);
+    }
+
+    .container {
+        top: 45%;
+        background: none;
+        box-shadow: none;
+        flex-wrap: wrap;
+    }
+
+    .left-login {
+        display: none;
+    }
+
+    .login-box {
+        height: 485px;
+    }
+
+    .titulo_celular {
+        display: unset;
+        color: white;
+        font-size: 20px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .user_registrado {
+        font-size: 12px;
+        bottom: 0px;
+        top: 10px;
+    }
+}
+
+/*----------------------------------------------------RESPONSIVIDADE----------------------------------------------------*/
+/*--------------------------------------------320px — 480px: dispositivos móveis----------------------------------------*/
+/*--------------------------------------------------------GERAL---------------------------------------------------------*/
+
+@media (max-width: 480px) {
+    body {
+        background: linear-gradient(#a32636, #691923);
+    }
+
+    .container {
+        top: 45%;
+        background: none;
+        box-shadow: none;
+        flex-wrap: wrap;
+    }
+
+    .left-login {
+        display: none;
+    }
+
+    .login-box {
+        height: 485px;
+    }
+
+    .titulo_celular {
+        display: unset;
+        color: white;
+        font-size: 20px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .user_registrado {
+        font-size: 12px;
+        bottom: 0px;
+        top: 10px;
+    }
+}
+
+/*----------------------------------------------------RESPONSIVIDADE----------------------------------------------------*/
+/*--------------------------------------------481px — 768px: iPads, tablets----------------------------------------*/
+/*--------------------------------------------------------GERAL----------------------------------------------------------*/
+@media (max-width: 840px) and (min-width: 481px) {
+    body {
+        background: linear-gradient(#a32636, #691923);
+    }
+
+    .container {
+        top: 45%;
+        background: none;
+        box-shadow: none;
+        flex-wrap: wrap;
+    }
+
+    .left-login {
+        display: none;
+    }
+
+    .login-box {
+        height: 485px;
+    }
+
+    .titulo_celular {
+        display: unset;
+        color: white;
+        font-size: 20px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .user_registrado {
+        font-size: 12px;
+        bottom: 0px;
+        top: 10px;
+    }
+}
